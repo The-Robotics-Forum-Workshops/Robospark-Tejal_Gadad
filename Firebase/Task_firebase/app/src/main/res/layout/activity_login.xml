@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:minHeight="70dp"
+            tools:ignore="UselessLeaf" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLogin"
+            android:text="@string/login"
+            android:textSize="40sp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/imgLogin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_login"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvLoginEmail"
+                android:text="@string/e_mail"
+                android:textSize="17sp"
+                android:layout_weight="2"/>
+
+            <EditText
+                android:id="@+id/etLoginEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:hint="@string/enter_registered_email"
+                android:inputType="textEmailAddress"
+                android:textSize="17sp"
+                tools:ignore="Autofill,TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvLoginPwd"
+                android:text="@string/password"
+                android:textSize="17sp"
+                android:layout_weight="2"/>
+
+            <EditText
+                android:id="@+id/etLoginPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:hint="@string/enter_password"
+                android:inputType="text"
+                android:textSize="17sp"
+                tools:ignore="Autofill,TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:minHeight="70dp"
+            tools:ignore="UselessLeaf" />
+
+        <Button
+            android:id="@+id/btLoginSubmit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="loginUser"
+            android:text="@string/login" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1><br>
+    <form action="form" method="POST">
+        {%csrf_token%}
+        <table>
+            <tr>
+                <td>Enter name:</td>
+                <td><input type="text" name ="name" required /></td>
+            </tr>
+            <tr>
+                <td>Enter age:</td>
+                <td><input type="text" name ="age" required /></td>
+            </tr>
+            <tr>
+                <td>Enter email id:</td>
+                <td><input type="email" name ="emailID" required /></td>
+            </tr>
+            <tr>
+                <td>Enter phone number:</td>
+                <td><input type="text" name ="phone" required /></td>
+            </tr>
+        </table><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
+{% endblock%}
